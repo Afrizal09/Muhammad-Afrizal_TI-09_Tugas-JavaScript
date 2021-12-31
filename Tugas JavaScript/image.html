@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Gambar</title>
+</head>
+<body>
+    <style>
+        *{
+            font-size: 15pt;
+            margin-top: auto;
+            align-items: center;
+            text-align: center;
+            border-style: solid;
+        }
+    </style>
+    <select name="" id="daftar" onchange="tampil()">
+        <option value="">-Pilih Hewan-</option>
+        <option value="kucing">Kucing</option>
+        <option value="harimau">Harimau</option>
+        <option value="burung merpati">Burung Merpati</option>
+        <option value="kambing">Kambing</option>
+        <option value="nyamuk">Nyamuk</option>
+        <option value="lebah">Lebah</option>
+    </select>
+    <div id="hasil"></div>
+
+    <script>
+        let daftar = document.getElementById("daftar")
+        let hasil = document.getElementById("hasil")
+
+        function tampil(){
+            switch (daftar.value) {
+                case "kucing":
+                hasil.innerHTML = '<img src="https://asset.kompas.com/crops/SV5q4gPkeD8YJTuzO31BqTr9DEI=/192x128:1728x1152/750x500/data/photo/2021/03/06/60436a28b258b.jpg" alt="">'
+                alert("ini adalah gambar Kucing")
+                break;
+
+                case "harimau":
+                hasil.innerHTML = '<img src="https://m.kbr.id/media/?size=810x450&filename=/archive/2014/07/30/harimau-b.jpg" alt="">'
+                alert("ini adalah gambar Harimau")
+                break;
+
+                case "burung merpati":
+                hasil.innerHTML = '<img src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2021/06/22034959/Ketahui-Ciri-Ciri-Burung-Merpati-yang-Sehat.jpg" alt="">'                
+                alert("ini adalah gambar Burung Merpati")
+                break;
+
+                case "kambing":
+                hasil.innerHTML = '<img src="http://dkandang.co.id/wp-content/uploads/2018/10/kambing-dan-domba.jpg" alt="">'
+                alert("ini adalah gambar Kambing")
+                break;
+
+                case "nyamuk":
+                hasil.innerHTML = '<img src="https://asset.kompas.com/crops/8Wr_gvvT_MwEfrLeIblw8I_SNYE=/0x0:1000x667/750x500/data/photo/2020/07/03/5efeb2643f3b9.jpg" alt="">'
+                alert("ini adalah gambar Nyamuk")
+                break;
+
+                case "lebah":
+                hasil.innerHTML = '<img src="http://ptpn10.co.id/uploads/honeybee.jpg" alt="">'
+                alert("ini adalah gambar Lebah")
+                break;
+
+
+                default:
+                    hasil.innerHTML =""
+            }
+        }
+    </script>
+</body>
+</html>
